@@ -1,0 +1,5 @@
+D:\Shop\Shop\obj\Release\net7.0\Shop.csproj.AssemblyReference.cache
+D:\Shop\Shop\obj\Release\net7.0\Shop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Shop\Shop\obj\Release\net7.0\Shop.AssemblyInfoInputs.cache
+D:\Shop\Shop\obj\Release\net7.0\Shop.AssemblyInfo.cs
+D:\Shop\Shop\obj\Release\net7.0\Shop.csproj.CoreCompileInputs.cache

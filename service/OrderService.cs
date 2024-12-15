@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Shop.model;
+﻿using Shop.model;
 
 namespace Shop.service
 {
@@ -42,16 +37,16 @@ namespace Shop.service
         public double GetDiscountAmount()
         {
             double discount = 0;
-            var prices = order.OrderItems.Select(item => item.Product.Price).OrderBy(price => price).ToList();
-
-            if (prices.Count >= 2)
+            var prices = order.OrderItems.Select(item => item.Product.Price).OrderByDescending(price => price).ToList();
+            
+            if (prices.Count == 2)
             {
                 discount += prices[1] * 0.1;
             }
 
             if (prices.Count >= 3)
             {
-                discount = Math.Max(discount, prices[2] * 0.2);
+                discount = prices[2] * 0.2;
             }
 
             double totalWithoutDiscounts = GetTotalWithoutDiscounts();

@@ -56,6 +56,12 @@ namespace Shop
                         break;
 
                     case "2":
+                        var items = orderService.GetOrderItems();
+                        if (items.Count == 0)
+                        {
+                            Console.WriteLine("The order is empty. Nothing to remove.");
+                            break;
+                        }
                         controller.PrintOrder();
                         Console.Write("Enter the number of the product to remove: ");
                         if (int.TryParse(Console.ReadLine(), out int removeIndex))
